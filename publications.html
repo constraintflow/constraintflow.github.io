@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications · ConstraintFlow</title>
+    <meta name="description" content="ConstraintFlow: a DSL and toolchain for specifying, verifying, and compiling neural network certifiers.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Caladea:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+    
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a class="brand" href="index.html#top">ConstraintFlow</a>
+            <div class="topbar-links">
+                <a href="publications.html">Publications</a>
+                <a href="index.html#team">Team</a>
+                <a href="https://github.com/uiuc-focal-lab/constraintflow" target="_blank" title="GitHub repository">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="pubs-page">
+            <div class="section-head">
+                <h2>Publications</h2>
+            </div>
+            <ol class="cites" reversed>
+            <li class="cite pub" id="pub-sail">
+                <p class="cite-text"><span class="cite-authors">Qiuhan Gu, Avaljot Singh, Gagandeep Singh.</span> <span class="cite-title">SAIL: Sound Abstract Interpreters with LLMs.</span> <em>Proceedings of the ACM on Programming Languages (PLDI)</em>, 2026.</p>
+                <div class="pub-links">
+                    <details><summary>Abstract</summary></details>
+                    <a href="https://dl.acm.org/doi/pdf/10.1145/3808308" target="_blank">PDF</a> <a href="https://doi.org/10.1145/3808308" target="_blank">DOI</a> <a href="https://arxiv.org/abs/2511.13663" target="_blank">arXiv</a>
+                    <details><summary>BibTeX</summary></details>
+                </div>
+                <div class="pub-extra" hidden data-abstract><p>How to construct globally sound abstract interpreters to safely approximate program behaviors remains a bottleneck in abstract interpretation. In this paper, we show the potential of using state-of-the-art LLMs to automate this tedious process. Focusing on the neural network verification area, we synthesize non-trivial sound abstract transformers across diverse abstract domains using LLMs to search within infinite space from scratch. We formalize the synthesis task as a constrained optimization problem, for which we design a novel mathematically grounded cost function that measures the degree of unsoundness of each generated candidate transformer, while enforcing hard syntactic and semantic validity constraints. Building on this formulation, we introduce SAIL, a novel unified framework that combines model generation, syntactic and semantic validation, and cost-function-based refinement to synthesize globally sound abstract transformers. Evaluation results show that SAIL not only matches the performance of manually designed transformers, but also is able to synthesize sound and high-precision transformers that do not exist in the literature for complex non-linear operators.</p></div>
+                <div class="pub-extra" hidden data-bibtex><div class="code-wrap"><div class="code-title"><span>BibTeX</span><button class="copy-btn" data-copy="pbib-sail">Copy</button></div><pre class="code" id="pbib-sail">@article{gu2026sail,
+  title   = {SAIL: Sound Abstract Interpreters with LLMs},
+  author  = {Gu, Qiuhan and Singh, Avaljot and Singh, Gagandeep},
+  journal = {Proceedings of the ACM on Programming Languages},
+  volume  = {10},
+  number  = {PLDI},
+  pages   = {1534--1559},
+  year    = {2026},
+  doi     = {10.1145/3808308}
+}</pre></div></div>
+            </li>
+            <li class="cite pub" id="pub-scepter">
+                <p class="cite-text"><span class="cite-authors">Avaljot Singh<sup>*</sup>, Dushyant Bharadwaj<sup>*</sup>, Yasmin Sarita, Heng Zhong, Charith Mendis, Gagandeep Singh.</span> <span class="cite-title">Fast and Scalable Abstract Interpretation for Deep Neural Networks.</span> <em>Coming soon</em>, 2026. <span class="eq-note">(* equal contribution)</span></p>
+                <div class="pub-links">
+                    <details><summary>Abstract</summary></details>
+                    
+                </div>
+                <div class="pub-extra" hidden data-abstract><p>Abstract interpretation can certify properties of Deep Neural Networks (DNNs), but precise analyses remain expensive. General implementations repeat work when analyzing the same architecture under different inputs and properties. Interleaving this work with numerical operations limits GPU utilization and restricts how much of the analysis a tensor compiler can process together.</p>
+                        <p>We present Scepter, a framework for specializing DNN abstract interpreters through structural semantics. The semantics determines the structure of intermediate abstract values while deferring their numerical evaluation. Structural computations from successive operations can therefore be performed together before certification, generating an executable tensor program for the numerical computation. With the interpreter, architecture, and input and batch shapes fixed, the program can be reused with different weights and input regions. We prove that it computes the same bounds as the general interpreter in exact arithmetic. The generated program also exposes operations and their dependencies for tensor compilation and memory planning. We implement Scepter for the tensor programs that Neuton generates from ConstraintFlow specifications.</p>
+                        <p>We evaluate Scepter on eight abstract interpreters and 44 DNNs against six baseline systems on GPUs and CPUs. Across the evaluated analyses, Scepter handles networks with up to 153&times; as many neurons as the largest completed by the corresponding baselines. It completes DeepPoly on ResNet50 and VGG-16, whereas none of the evaluated DeepPoly baselines completes either network. On configurations completed by both systems, GPU geometric-mean speedups over Neuton range from 11.9&times; to 44.4&times; across eight analyses, with a 2.60&times; geometric-mean reduction in peak memory. In an input-splitting case study, Scepter proves 68 properties for which the baselines times out.</p></div>
+                
+            </li>
+            <li class="cite pub" id="pub-provesound">
+                <p class="cite-text"><span class="cite-authors">Avaljot Singh, Yasmin Chandini Sarita, Charith Mendis, Gagandeep Singh.</span> <span class="cite-title">Automated Verification of Soundness of DNN Certifiers.</span> <em>Proceedings of the ACM on Programming Languages (OOPSLA)</em>, 2025.</p>
+                <div class="pub-links">
+                    <details><summary>Abstract</summary></details>
+                    <a href="https://doi.org/10.1145/3720509" target="_blank">DOI</a> <a href="https://arxiv.org/abs/2504.04542" target="_blank">arXiv</a> <a href="https://github.com/uiuc-focal-lab/constraintflow" target="_blank">Code</a>
+                    <details><summary>BibTeX</summary></details>
+                </div>
+                <div class="pub-extra" hidden data-abstract><p>The uninterpretability of Deep Neural Networks (DNNs) hinders their use in safety-critical applications. Abstract Interpretation-based DNN certifiers provide promising avenues for building trust in DNNs. Unsoundness in the mathematical logic of these certifiers can lead to incorrect results. However, current approaches to ensure their soundness rely on manual, expert-driven proofs that are tedious to develop, limiting the speed of developing new certifiers. Automating the verification process is challenging due to the complexity of verifying certifiers for arbitrary DNN architectures and handling diverse abstract analyses. We introduce ProveSound, a novel verification procedure that automates the soundness verification of DNN certifiers for arbitrary DNN architectures. Our core contribution is the novel concept of a symbolic DNN, using which, ProveSound reduces the soundness property, a universal quantification over arbitrary DNNs, to a tractable symbolic representation, enabling verification with standard SMT solvers. By formalizing the syntax and operational semantics of ConstraintFlow, a DSL for specifying certifiers, ProveSound efficiently verifies both existing and new certifiers, handling arbitrary DNN architectures.</p></div>
+                <div class="pub-extra" hidden data-bibtex><div class="code-wrap"><div class="code-title"><span>BibTeX</span><button class="copy-btn" data-copy="pbib-provesound">Copy</button></div><pre class="code" id="pbib-provesound">@article{singh2025provesound,
+  title   = {Automated Verification of Soundness of DNN Certifiers},
+  author  = {Singh, Avaljot and Sarita, Yasmin Chandini and Mendis, Charith and Singh, Gagandeep},
+  journal = {Proceedings of the ACM on Programming Languages},
+  volume  = {9},
+  number  = {OOPSLA1},
+  pages   = {1802--1830},
+  year    = {2025},
+  doi     = {10.1145/3720509}
+}</pre></div></div>
+            </li>
+            <li class="cite pub" id="pub-neuton">
+                <p class="cite-text"><span class="cite-authors">Avaljot Singh, Yasmin Chandini Sarita, Aditya Mishra, Gagandeep Singh, Charith Mendis.</span> <span class="cite-title">Automatic Tensor-level Execution of Abstract Interpreters for Neural Networks.</span> <em>arXiv preprint 2507.20055</em>, 2025.</p>
+                <div class="pub-links">
+                    <details><summary>Abstract</summary></details>
+                    <a href="https://arxiv.org/pdf/2507.20055" target="_blank">PDF</a> <a href="https://github.com/uiuc-focal-lab/constraintflow" target="_blank">Code</a>
+                    <details><summary>BibTeX</summary></details>
+                </div>
+                <div class="pub-extra" hidden data-abstract><p>Developing new abstract interpretation-based DNN certifiers is difficult because their mathematical design is expressed at the neuron level, while implementations must operate at the tensor level. Existing libraries such as auto_LiRPA, IVAN, and ERAN support fixed sets of certifiers; extending them requires expertise in formal methods and tensor programming. Domain-specific languages such as ConstraintFlow let researchers specify certifiers at the neuron level, but cannot run them on real DNNs. We present Neuton, a framework that automatically translates neuron-level certifier specifications into tensor-level executables, enabling new DNN certifiers without manual tensor programming. Neuton makes three contributions. First, a stack-based intermediate representation (IR) and shape analysis infer implicit tensor operations, including broadcasts, dimension expansions, and reductions, required for correct execution. Second, domain-specific rewrite rules optimize common tensor operation sequences into more efficient equivalents. Third, gBCSR is a sparse tensor format using variable-sized, layer-aligned blocks over a non-zero default value, tailored to DNN certifier sparsity. We prove that translation preserves neuron-level semantics. We evaluate Neuton on 8 certifiers and 32 DNN benchmarks. Neuton compiles four existing certifiers and produces the first executable implementations of four others: two previously specified but never run, and two new designs. These expose precision-runtime trade-offs unavailable in existing libraries. For example, SkipPoly matches DeepPoly's precision on all 32 DNNs while running as fast or faster on half. Neuton's runtime on existing certifiers is competitive with hand-optimized libraries.</p></div>
+                <div class="pub-extra" hidden data-bibtex><div class="code-wrap"><div class="code-title"><span>BibTeX</span><button class="copy-btn" data-copy="pbib-neuton">Copy</button></div><pre class="code" id="pbib-neuton">@misc{singh2025neuton,
+  title         = {Automatic Tensor-level Execution of Abstract Interpreters for Neural Networks},
+  author        = {Singh, Avaljot and Sarita, Yasmin Chandini and Mishra, Aditya and Singh, Gagandeep and Mendis, Charith},
+  year          = {2025},
+  eprint        = {2507.20055},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2507.20055}
+}</pre></div></div>
+            </li>
+            <li class="cite pub" id="pub-constraintflow">
+                <p class="cite-text"><span class="cite-authors">Avaljot Singh, Yasmin Sarita, Charith Mendis, Gagandeep Singh.</span> <span class="cite-title">ConstraintFlow: A Declarative DSL for Easy Development of DNN Certifiers.</span> <em>Static Analysis Symposium (SAS), LNCS</em>, 2024.</p>
+                <div class="pub-links">
+                    <details><summary>Abstract</summary></details>
+                    <a href="https://doi.org/10.1007/978-3-031-74776-2_16" target="_blank">DOI</a> <a href="https://arxiv.org/abs/2403.18729" target="_blank">arXiv</a> <a href="https://github.com/uiuc-focal-lab/constraintflow" target="_blank">Code</a>
+                    <details><summary>BibTeX</summary></details>
+                </div>
+                <div class="pub-extra" hidden data-abstract><p>We develop a declarative DSL &ndash; ConstraintFlow &ndash; that can be used to specify Abstract Interpretation-based DNN certifiers. In ConstraintFlow, programmers can easily define various existing and new abstract domains and transformers, all within just a few 10s of Lines of Code as opposed to 1000s of LOCs of existing libraries. We provide lightweight automatic verification, which can be used to ensure the over-approximation-based soundness of the certifier code written in ConstraintFlow for arbitrary (but bounded) DNN architectures. Using this automated verification procedure, for the first time, we can verify the soundness of state-of-the-art DNN certifiers for arbitrary DNN architectures, all within a few minutes.</p></div>
+                <div class="pub-extra" hidden data-bibtex><div class="code-wrap"><div class="code-title"><span>BibTeX</span><button class="copy-btn" data-copy="pbib-constraintflow">Copy</button></div><pre class="code" id="pbib-constraintflow">@inproceedings{singh2024constraintflow,
+  title     = {ConstraintFlow: A Declarative DSL for Easy Development of DNN Certifiers},
+  author    = {Singh, Avaljot and Sarita, Yasmin and Mendis, Charith and Singh, Gagandeep},
+  booktitle = {Static Analysis (SAS 2024)},
+  series    = {Lecture Notes in Computer Science},
+  publisher = {Springer Nature Switzerland},
+  pages     = {407--424},
+  year      = {2024},
+  doi       = {10.1007/978-3-031-74776-2_16}
+}</pre></div></div>
+            </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <div class="labs">
+            <a class="lab" href="https://github.com/uiuc-focal-lab" target="_blank" title="FOCAL Lab"><img src="images/labs/focal.png" alt="FOCAL Lab logo"><span>FOCAL Lab</span></a>
+            <a class="lab" href="https://www.adaptuiuc.web.illinois.edu/" target="_blank" title="ADAPT Lab"><img src="images/labs/adapt.png" alt="ADAPT Lab"></a>
+            <a class="lab" href="https://illinois.edu/" target="_blank" title="University of Illinois Urbana-Champaign"><img src="images/labs/illinois.svg" alt="University of Illinois Urbana-Champaign"></a>
+        </div>
+        <p><a href="https://github.com/uiuc-focal-lab/constraintflow" target="_blank">github.com/uiuc-focal-lab/constraintflow</a></p>
+    </footer>
+
+    <script src="js/site.js"></script>
+</body>
+</html>
