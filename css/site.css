@@ -152,7 +152,7 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 700; color: var(--ink); }
 .hero .btn.primary:hover .arr { transform: translateX(3px); }
 /* GitHub and Publications: quiet links beside the one main button */
 .hero .links { display: inline-flex; gap: 22px; }
-.hero .textlink { font-family: var(--sans); font-size: 0.95rem; font-weight: 500; color: var(--primary); text-decoration: none; border-bottom: 1px solid var(--rule-strong); padding-bottom: 1px; }
+.hero .textlink { font-family: var(--sans); font-size: 0.95rem; font-weight: 500; color: var(--primary); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 1px; }
 .hero .textlink:hover { border-color: var(--primary); }
 
 .btn {
