@@ -154,6 +154,15 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 700; color: var(--ink); }
 .hero .links { display: inline-flex; gap: 22px; }
 .hero .textlink { font-family: var(--sans); font-size: 0.95rem; font-weight: 500; color: var(--primary); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 1px; }
 .hero .textlink:hover { border-color: var(--primary); }
+/* One line on scale: fades in once, then the number warms to gold, as the background neurons do. */
+.hero .scale { margin: 26px 0 0; font-family: var(--sans); font-size: 0.95rem; color: var(--muted); }
+.hero .scale b { font-weight: 600; color: var(--gold-text); }
+@media (prefers-reduced-motion: no-preference) {
+    .hero .scale { animation: scale-in 1.1s ease 0.5s both; }
+    .hero .scale b { animation: scale-warm 1.4s ease 1.2s both; }
+}
+@keyframes scale-in { from { opacity: 0; transform: translateY(4px); } }
+@keyframes scale-warm { from { color: var(--muted); } }
 
 .btn {
     display: inline-block;
